@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="description" content="AnupsDesign">
+<meta name="keywords" content="HTML,CSS,JavaScript,Anup,AnupsDesign,Anup's Design,WebDesign,Web Design,Webdesigner,Portfolio,Trending,Trend,TrendingDesign,Freelance">    
+<link rel="stylesheet" href="ionicons/css/ionicons.min.css">
+<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<style>
+    @import url('https://fonts.googleapis.com/css?family=Monoton');
+    @import url('https://fonts.googleapis.com/css?family=Just+Me+Again+Down+Here');
+    * {box-sizing: border-box}
+    body{
+        margin:0;
+        /*background-color: rgba(0,0,0,.6);*/
+        background-color: #3b3f41;
+        /*background-color: RGBA(171, 167, 45, 1.00);*/
+        }
+
+    /* Slideshow container */
+    .slideshow-container {
+        position: absolute;
+        width: 70%;
+        height: 500px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        transition: .3s;
+    }
+    .slideshow-container:hover{
+        -webkit-transition:.3s;
+        -moz-transition:.3s;
+        -ms-transition:.3s;
+        -o-transition:.3s;
+        transition:.3s;
+        -webkit-box-shadow: 0px 11px 30px -12px lavender;
+        -moz-box-shadow: 0px 11px 30px -12px lavender;
+        box-shadow: 0px 11px 30px -12px lavender;
+    }
+    .container-div{
+        width: 100%;
+        height: 500px;
+        background-color: #151515;
+        }
+    
+    .logo{
+            height: 165px;
+            width: 200px;
+            /*background-color: violet;*/
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background-image: url(images/logo.png);
+            background-repeat: no-repeat;
+            background-size: 100%;
+            background-position: center;
+            z-index: 1;
+        }
+        .logo{
+            -webkit-animation-name: spin;
+            -webkit-animation-duration: 5000ms;
+            -webkit-animation-iteration-count: infinite;
+            -webkit-animation-timing-function: linear;
+            -moz-animation-name: spin;
+            -moz-animation-duration: 5000ms;
+            -moz-animation-iteration-count: infinite;
+            -moz-animation-timing-function: linear;
+            -ms-animation-name: spin;
+            -ms-animation-duration: 5000ms;
+            -ms-animation-iteration-count: infinite;
+            -ms-animation-timing-function: linear;
+            /*
+            -webkit-animation-delay: 1s;
+            -moz-animation-delay: 1s;
+            -ms-animation-delay: 1s;
+            animation-delay: 1s;
+            */
+            animation-name: spin;
+            animation-duration: 5000ms;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+            /*animation-play-state: paused;*/
+        }
+        .logo:hover{
+            animation-play-state: paused;
+        }
+    .center-tooltiptext{
+            font-family: 'Just Me Again Down Here', cursive;
+            position: absolute;
+            top: 75%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            opacity: 0;
+            background-color: #dfdfdf;
+            color: #121212;
+            text-align: center;
+            transition: .3s;
+            font-size: 1.3em;
+            font-weight: bold;
+        }
+        .center-tooltiptext::after {
+            content: "";
+            position: absolute;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: transparent transparent #dfdfdf transparent;
+        }
+    .logo:hover ~ .center-tooltiptext {
+            opacity:1;
+            transition: .3s;
+        }
+    
+    /* Next & previous buttons */
+    .prev, .next {
+        /*background-color: rgba(0,0,0,.5);*/
+        position: absolute;
+        top: 0%;
+        width: 100px;
+        height: 100%;
+        padding: 16px;
+        transition: 0.6s ease;
+    }
+    .prev:hover{
+        cursor: w-resize;
+        }
+    .next:hover{
+        cursor: e-resize;
+        }
+    /* Position the "next button" to the right */
+    .next {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+    .right-tooltiptext{
+            font-family: 'Josefin Sans', sans-serif;
+            width: auto;
+            padding: 5px;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: -70%;
+            width: 120px;
+            transform: translate(-50%,-50%);
+            opacity: 0;
+            background-color: #dfdfdf;
+            color: #121212;
+            text-align: center;
+            transition: .3s;
+            margin: 0;
+        }
+        .right-tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 99%;
+            margin-top: -7px;
+            border-width: 7px;
+            border-style: solid;
+            border-color: transparent transparent transparent #dfdfdf;
+        }
+    .next:hover .right-tooltiptext {
+            opacity:1;
+            transition: .3s;
+        }
+    .left-tooltiptext{
+            font-family: 'Josefin Sans', sans-serif;
+            width: auto;
+            padding: 5px;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 170%;
+            width: 120px;
+            transform: translate(-50%,-50%);
+            opacity: 0;
+            background-color: #dfdfdf;
+            color: #121212;
+            text-align: center;
+            transition: .3s;
+            margin: 0;
+        }
+    .left-tooltiptext::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: -10%;
+            margin-top: -7px;
+            border-width: 7px;
+            border-style: solid;
+            border-color: transparent #dfdfdf transparent transparent;
+        }
+    .prev:hover .left-tooltiptext {
+            opacity:1;
+            transition: .3s;
+        }
+    .next h2{
+        color: #dfdfdf;
+        color: #f2f2f2;
+        font-size: 2em;
+        text-align: center;
+        padding: 20px;
+        font-family: 'Monoton', cursive;
+        text-transform: uppercase;
+        font-weight: lighter;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+    h2.rotateUp{
+        -moz-transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+        -webkit-transform: translateX(-50%) translateY(-50%) rotate(-90deg);
+        transform:  translateX(-50%) translateY(-50%) rotate(-90deg);
+    }
+    .prev h2{
+        color: #dfdfdf;
+        color: #f2f2f2;
+        font-size: 2em;
+        text-align: center;
+        padding: 20px;
+        font-family: 'Monoton', cursive;
+        text-transform: uppercase;
+        font-weight: lighter;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+    }
+    h2.rotateDown{
+        -moz-transform: translateX(-50%) translateY(-50%) rotate(90deg);
+        -webkit-transform: translateX(-50%) translateY(-50%) rotate(90deg);
+        transform:  translateX(-50%) translateY(-50%) rotate(90deg);
+    }
+    /* Caption text */
+    .center-heading {
+        position: relative;
+        top: 2%;
+        color: #dfdfdf;
+        font-size: 2em;
+        text-align: center;
+        padding: 10px;
+        font-family: 'Monoton', cursive;
+        text-transform: uppercase;
+        font-weight: lighter;
+        text-shadow: 0px 0px 5px lavender;
+        
+    }
+    .floating-image{
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        background-image: url(images/Clean.jpeg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: .5s;
+    }
+    .floating-image{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+	   animation: float 2s ease-in-out infinite;
+        transition: .5s;
+    }
+    .floating-image:hover{
+        transition: .6s;
+        background-image: url(images/ME%20PAGE%20PIC.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    @keyframes float {
+	0% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px) translateX(-50%) translateY(-50%);
+	}
+	50% {
+		box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2);
+		transform: translatey(-5px) translateX(-50%) translateY(-50%);
+	}
+	100% {
+		box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
+		transform: translatey(0px) translateX(-50%) translateY(-50%);
+	}
+        @keyframes bgchange{
+            0%{
+                
+            }
+            50%{
+                
+            }
+            100%{
+                
+            }
+        }    
+}
+    
+    .home .prev{display: none;}
+    /* The dots/bullets/indicators */
+    .dot {
+      position: relative;
+      cursor: pointer;
+      display: inline-block;
+      transition: 0.4s ease;
+      padding: 20px;
+    }
+    .icon{
+        color: #dfdfdf;
+        font-size: 2.5em;
+        }
+    .nav-icons{
+        position: absolute;
+        left: 50%;
+        top: 87%;
+        transform: translate(-50%,-50%);
+        margin: 0 auto;
+        width: 50%;
+        background-color: RGBA(45, 46, 48, .3);
+        border-radius: 20px;
+        -webkit-box-shadow: 0px 19px 30px -5px RGBA(12, 12, 12, 1.00);
+        -moz-box-shadow: 0px 19px 30px -5px RGBA(12, 12, 12, 1.00);
+        box-shadow: 0px 19px 30px -5px RGBA(12, 12, 12, 1.00);
+    }
+    .active, .dot:hover {
+      /*background-color: #717171;*/
+      text-shadow: 0px 0px 10px RGBA(230, 230, 250, 1.00);
+     animation: pulsate 3s ease-out infinite;
+    }
+    @-webkit-keyframes pulsate {
+    0%   { text-shadow: 0 0 0 RGBA(230, 230, 250, 1.00); }
+    50%  { text-shadow: 0 0 15px RGBA(230, 230, 250, 1.00); }
+    100% { text-shadow: 0 0 0 RGBA(230, 230, 250, 1.00); }
+    }
+    
+    .footer{
+            position: relative;
+            width: auto;
+            height: 20px;
+            top: 5%;
+            /*background-color: navajowhite;*/
+        }
+        .footer p{
+            font-size: .9em;
+            word-spacing: .3em;
+            color: #dfdfdf;
+            font-family: 'Josefin Sans', sans-serif;
+            font-weight: lighter;
+            margin: 0vh;
+            padding: 0px;
+            text-align: center;
+            line-height: 20px;
+        }
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+  transition: all 1s ease-in-out;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .3; }
+  to {opacity: 1; }
+}
+
+@keyframes fade {
+    from {opacity: .3; }
+    to {opacity: 1; }
+}
+    
+@-ms-keyframes spin {
+            from { -ms-transform: rotate(0deg); }
+            to { -ms-transform: rotate(360deg); }
+        }
+@-moz-keyframes spin {
+            from { -moz-transform: rotate(0deg); }
+            to { -moz-transform: rotate(360deg); }
+        }
+@-webkit-keyframes spin {
+            from { -webkit-transform: rotate(0deg); }
+            to { -webkit-transform: rotate(360deg); }
+        }
+@keyframes spin {
+            from {
+                transform:translate(-50%,-50%) rotate(0deg);
+            }
+            to {
+                transform:translate(-50%,-50%) rotate(360deg);
+            }
+        }    
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+    
+</style>-->
+    
+</head>
+    
+<body on contextmenu="return false;" onselectstart="return false;" ondragstart="return false;">
+
+<div class="slideshow-container">
+    <!-- Home -->
+    <div class="mySlides fade">
+
+        <div class="container-div">
+            <div class="center-heading home">Home</div>
+            <div class="logo">
+              </div>
+            <div class="center-tooltiptext">
+                    Hey! thanks for stopping by, but I think I look cool when I'm spinning.
+            </div>
+            <a class="next" onclick="plusSlides(1)">
+                <h2 class="rotateUp">About</h2>
+                <div class="right-tooltiptext">
+                    Next / About
+                </div>
+            </a>
+
+        </div>
+    </div>
+    <!-- About -->
+    <div class="mySlides fade">
+
+        <div class="container-div">
+
+            <a class="prev" onclick="plusSlides(-1)">
+                <div class="left-tooltiptext">
+                    Prev / Home
+                </div>
+                <h2 class="rotateDown">Home</h2>
+            </a>
+            <div class="center-heading">About</div>
+            <div class="floating-image"></div>
+            <div class="about-wrap" on contextmenu="return false;" onselectstart="return false;" ondragstart="return false;">
+                <div class="img"></div>
+                <h1>Who am I ?</h1>
+                <p class="fade">
+                    Hi, my name is <span>Anup</span>. I currently reside in <span>New York City</span>. That&#39;s me you see right there looking serious. I am currently an undergrad Computer Science student. I <span>design and build</span> high quality responsive websites to provide an <span>exceptional user</span> <span>experience</span>.<br><br>
+
+                    I like learning new things. I&#39;m constantly learning web technologies and other design related topics. I like to commit myself to something if it <span>sparks up my interest </span>and if I find it <span>inspiring</span>. This is what inspired me to get myself into the field of web design. The fact that an idea inside one&#39;s mind can be turned into an action <span>fascinates me</span> more than anything else. <br><br>
+
+                    When I&#39;m not coding you will probably find me watching movies, drinking a cold juice or smoothie may be along with some warm MOMO <span>&#40;<i style="font-weight: lighter">Nepali Dumpling</i>&#41;</span>. I enjoy a good video game. I <span>love photography</span>, I like to explore the city and take pictures of people and things. I might be addicted to matcha and it’s smell and the smell of <span>air</span> (most of the time). I <span>taught my self</span> HTML &amp; CSS, but right now <span>I’m learning</span> Javascript along with few other <span>object-oriented languages</span> and I look forward to <span>working on exciting things</span> in the near future.
+                </p>
+                <h1>My design / development process</h1>
+                <p class="fade">
+                    My design process is where all the fun begins, I never let wireframes be part of brainstorming. Anytime I get any design inspiration or idea I don't spend my time wireframing or sketching it, instead I dive right into creating prototypes using <span>HTML, CSS and Javascript </span>if needed. If you&#39;d like to know more about how I work then <span><a href="#contact" onclick="plusSlides(2)">contact me</a></span>.
+                </p>
+                
+                <h1>What tools do I use ?</h1>
+                
+                <ul on contextmenu="return false;" onselectstart="return false;" ondragstart="return false;">
+                    <li><img src="images/atom.png" width="40px" title="Atom"></li>
+                    <li><img src="images/brackets.png" width="40px" title="Brackets"></li>
+                    <li><img src="images/github.svg" width="45px" title="GitHub Desktop"></li>
+                    <li><img src="images/ps.png" width="40px" title="Photoshop"></li>
+                    <li><img src="images/xd.png" width="40px" title="Adobe XD"></li>
+                </ul>
+                
+                <p class="fade">
+                    I believe myself to be a quick learner, I am willing to learn new things if needed.
+                    <!--
+                    I believe myself to be a quick learner and I like to keep an open mind. Having an open mind means to be willing to consider or receive new and different ideas. If working on a project needs one to take a new approach be it by adapting themself to a new environment or using different tools then they must do all that it takes to accomplish the task.
+                    -->
+                </p>
+                
+                <h1>What I can help you with</h1>
+                <p class="fade">
+                    I'll be happy to help you if you are looking for someone to help you build a clean and attractive responsive website to provide your visitors with a great user experience which may help you turn your visitors into your customers/clients. I believe that diversity of ideas makes us all wiser, so if you have an idea and are looking for somebody to collaborate with then please don&#39;t hesitate to reach out to me.
+                    <br>
+                    I&#39;m currently available for work and taking on new projects, so please <span><a href="#contact" onclick="plusSlides(2)"><br>contact me</a></span>.
+                </p>
+                
+            </div> 
+            <a class="next" onclick="plusSlides(1)">
+            <h2 class="rotateUp">Portfolio</h2>    
+            <div class="right-tooltiptext">
+                Next / Portfolio
+            </div>
+            </a>
+
+        </div>
+    </div>
+    <!-- Portfolio -->
+    <div class="mySlides fade">
+
+        <div class="container-div">
+            <a class="prev" onclick="plusSlides(-1)">
+                <div class="left-tooltiptext">
+                    Prev / About
+                </div>
+                <h2 class="rotateDown">About</h2>
+            </a>
+            <div class="center-heading">Portfolio</div>
+            <div class="about-wrap">
+                
+                
+                <div class="project-wrap">
+                    
+                    <div class="browser">
+                        <div class="inside-content project1">
+                            <div class="overlay">
+                                <div class="project-info">
+                                <h1>Sweet Bakery</h1>
+                                <p>
+                                    This is a clean, professional design. It&#39;s features include interactive gallery, notification bar, large captivating images, image carousel and many more. It is an ideal design for agencies, restaurants and more. Immerse your visitors in your brand. Check it out for yourself.
+
+                                    <a href="https://anupsdesign.github.io/Bakery-DEMO-/" class="demo-btn" target="_blank">Live Demo</a>
+                                </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="browser">
+                        <div class="inside-content project2">
+                            <div class="overlay">
+                                <div class="project-info">
+                                <h1>The Hair Wizard Barbershop</h1>
+                                <p>
+                                    This design features nice color contrast, vivid headlines along with long scrolling pages with nice background images and a smooth scrolling effect to help visitors navigate the site with ease. 
+
+                                    <a href="https://anupsdesign.github.io/Barbershop-Demo-/" class="demo-btn" target="_blank">Live Demo</a>
+                                </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="comingsoon">
+                        <h1>I&#39;m working on more designs...</h1>
+                        <p>Sign up with your email to get notified when a new design is published.</p>
+
+                        <form>
+                            <input type="email" placeholder="Your Email" required><button type="submit">Sign Up</button>
+                        </form>
+
+                    </div>
+                    
+                </div>
+                
+                
+            </div>
+            <a class="next" onclick="plusSlides(1)">
+                <h2 class="rotateUp">Contact</h2>
+                <div class="right-tooltiptext">
+                    Next / Contact
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- Contact -->
+    <div class="mySlides fade">
+
+        <div class="container-div" id="particles-js">
+            <a class="prev" onclick="plusSlides(-1)">
+                <div class="left-tooltiptext">
+                    Prev / Portfolio
+                </div>
+                <h2 class="rotateDown">Portfolio</h2>
+            </a>
+            <div class="nobg">Contact</div>
+            <div class="form">
+                <h2>For all inquiries, please write me at <a href="mailto:info@anupsdesign.com">info@anupsdesign.com</a></h2>
+            </div>
+        </div>
+    </div>     
+    
+    <div class="nav-icons" style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)" title="Home"><i class="icon ion-home" title="Home"></i></span>
+      <span class="dot" onclick="currentSlide(2)" title="About"><i class="icon ion-information" title="About"></i></span>
+      <span class="dot" onclick="currentSlide(3)" title="Portfolio"><i class="icon ion-folder" title="Portfolio"></i></span>
+      <span class="dot" onclick="currentSlide(4)" title="Contact"><i class="icon ion-email" title="Contact"></i></span>
+    </div>
+    <div class="footer">
+        <p>&copy; 2018 Anup'sDesign. All Rights Reserved. Designed &amp; Coded by Anup.</p>  
+    </div>
+
+</div>
+    
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="particles.js"></script>
+<script src="app.js"></script>
+    
+<script>
+        $('a > img').bind('contextmenu', function(e){
+            return false;
+        }); 
+      </script>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+</body>
+</html> 
