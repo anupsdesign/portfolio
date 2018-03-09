@@ -214,6 +214,11 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 </script>
+<script>
+    $('a').on('click', function(e) {
+        e.preventDefault();
+    });
+</script>    
 
 </body>
 </html> 
