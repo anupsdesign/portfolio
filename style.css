@@ -414,6 +414,7 @@ h2.rotateDown{
 }
 .example{
     position: relative;
+    top: 15px;
     display: grid;
     grid-template-columns: repeat(auto-fill,minmax(100%,1fr));
     justify-items: center;
