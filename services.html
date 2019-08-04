@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">    
+<meta name="viewport" content="width=device-width, initial-scale=1">  
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">      
+<link rel="stylesheet" href="style/services.css">   
+<title>Services</title>    
+<style>
+    
+    @import url('https://fonts.googleapis.com/css?family=Reenie+Beanie');
+    @import url('https://fonts.googleapis.com/css?family=EB+Garamond&display=swap');
+    
+    body{
+        background-color: #fff;
+    }
+    ::-webkit-scrollbar {
+        width: 0px;  /* Remove scrollbar space */
+        background: transparent;  /* Optional: just make scrollbar invisible */
+    }
+    .line-menu {
+      background-color: #fff;
+      border-radius: 5px;
+      width: 100%;
+      height: 6px;
+    }
+    .line-menu.half {
+      width: 50%;
+    }
+    .line-menu.start {
+      transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
+      transform-origin: right;
+    }
+    .main{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        width: 95%;
+        margin: auto;
+        height: 90vh;
+        background-color: #202020;
+        text-align: center;
+        overflow: scroll;
+        -webkit-box-shadow: 0px 0px 30px 2px rgba(0,0,0,0.2);
+        -moz-box-shadow: 0px 0px 30px 2px rgba(0,0,0,0.2);
+        box-shadow: 0px 0px 30px 2px rgba(0,0,0,0.2);
+    }
+    h2{
+        position: relative;
+        transition: .4s;
+        z-index: -1;
+        -webkit-animation-duration: 1s, 2s;
+        -webkit-animation-name: topToBottom,paddingAnimate;
+        padding: 10px;
+        color: #d1d1d1;
+        text-transform: uppercase;
+        font-family: 'Unica One', cursive;
+        font-weight: 500;
+    }
+
+    h1{
+        color: #fff;
+        font-family: 'Josefin Sans', sans-serif;
+        text-transform: uppercase;
+    }
+    .center-wrap h1{
+        margin: 0;
+    }
+    .left p{
+        color: #999;
+        line-height: 1.4em;
+        font-family: 'EB Garamond', serif;
+        font-size: 1.2em;
+    }
+    .center-wrap ul{
+        text-align: center;
+        margin: 0;
+        padding: 0;
+    }
+    .center-wrap ul li{
+        padding: 10px;
+        list-style: none;
+        display: inline-block;
+    }
+    .center-content{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .flex-container {
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-flex-wrap: nowrap;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-align-content: stretch;
+    align-content: stretch;
+    -webkit-align-items: center;
+    align-items: center;
+    }
+
+.flex-item-1{
+    -webkit-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    align-self: auto;
+    }
+
+.flex-item-2{
+    -webkit-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    align-self: auto;
+    }
+
+.flex-item-3{
+    -webkit-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    align-self: auto;
+    }
+</style>
+</head>
+<body>
+    
+    <div class="main">     
+
+        <div class="wrapper-menu">
+          <div class="line-menu half start"></div>
+          <div class="line-menu"></div>
+          <div class="line-menu half end"></div>
+        </div>
+        <span class="pulse"></span>
+        
+        <nav>
+            <div class="center-nav">
+                <ul>
+                    <a href="index.html"><li>Home</li></a>
+                    <a href="about.html"><li>About</li></a>
+                    <a href="services.html"><li class="active">Services</li></a>
+                    <a href="work.html"><li>Work</li></a>
+                    <a href="contact.html"><li>Contact</li></a>
+                </ul>   
+            </div> 
+            <p>Copyright &copy; <span class="year"></span> Anup&#39;s Design</p>
+        </nav>
+        <div class="fadein">
+            <div class="center-wrap">
+                <div class="center-content">
+                    <div class="front-end">
+                    
+                    <div class="flex-container">
+                            <div class="flex-item-1">
+                                <h1>Front&#45;End</h1>
+                                <div class="left">
+                                    <p>
+                                    I create responsive websites that allow users to experience your website in a better way in any device they are using. My goal for every project is to build a beautiful and responsive design using HTML, CSS and JavaScript.
+                                    </p>
+                                    <ul>
+                                        <li><img src="images/html.png" width="30px"></li>
+                                        <li><img src="images/js.png" width="30px"></li>
+                                        <li><img src="images/css.png" width="30px"></li>
+                                        <li><img src="images/bootstrap.png" width="50px" style="margin-bottom: -7px;"></li> <!--                    <li><img src="images/react.png" width="90px"></li>    -->
+                                    </ul>
+                                </div>
+                            </div>
+                    </div>    
+                    </div>
+                    <div class="back-end">
+                    
+                    <div class="flex-container">
+                        <div class="flex-item-2">
+                        <h1>Back&#45;End</h1>
+                        <div class="left">
+                            <p>
+                            Coming soon! I am constantly working on mastering new skills. I am always on the lookout for the latest updates and changes in the industry. It is important to keep perfecting craft constantly since technology is always evolving. I will be bringing some exciting updates soon, so make sure to stop by every once in awhile.
+                            </p>
+    <!--
+                            <ul>
+                            <li><img src="images/php.png" width="70px" style="margin-top: -0px;"></li> 
+                            <li><img src="images/ruby-on-rails.png" width="50px" style="margin-top: -10px;"></li>    
+                            </ul>
+    -->
+                        </div>
+                        </div>
+                    </div>    
+                    </div>
+                    <div class="other">
+                        <div class="flex-item-2">
+                        <h1>Other</h1>
+                            <ul>
+                            <li><img src="images/Photoshop.png" width="40px" style="margin-top: -0px;"></li> 
+                            <li><img src="images/xd.png" width="40px" style="margin-top: -10px;"></li>    
+                            </ul>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script type="text/javascript">
+      $('.wrapper-menu').click(function(){
+        $('nav').toggleClass("show-menu");
+        $('nav ul a li').toggleClass("show-menu");  
+      });
+    $('nav a').click(function(){
+        $('nav').toggleClass("show-menu");
+        $('nav ul a li').toggleClass("show-menu");  
+      });    
+    </script>
+    <script>
+        var wrapperMenu = document.querySelector('.wrapper-menu');
+        var showMenu = document.querySelector('nav');
+        var showLi = document.querySelector('li');
+        var navLink = document.querySelector('nav ul');
+        wrapperMenu.addEventListener('click', function(){
+            wrapperMenu.classList.toggle('open');
+            showMenu.toggleClass('show-menu'); 
+            showLi.toggleClass('show-li'); 
+        })
+        navLink.addEventListener('click', function(){
+           wrapperMenu.classList.toggle('open');
+            showMenu.toggleClass('show-menu'); 
+            showLi.toggleClass('show-li');  
+        })
+    </script>
+    <script>
+function openSection(evt, section) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+    tablinks[i].className = tablinks[i].className.replace(" pointer", "");  
+  }
+  document.getElementById(section).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
+</script>    
+    <script>
+        var d = new Date();
+        document.querySelector(".year").innerHTML = d.getFullYear();
+    </script>
+</body>
+</html> 
