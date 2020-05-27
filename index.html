@@ -1,211 +1,83 @@
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">  
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">      
-<link rel="stylesheet" href="style/main.css">   
-<title>Anup&#39;s Design</title>    
-<style>
-    @import url('https://fonts.googleapis.com/css?family=Staatliches&display=swap');
-    @import url('https://fonts.googleapis.com/css?family=Belleza&display=swap');
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
-
-    body{
-        background-color: #404040;
-    }
-    .line-menu {
-      background-color: #fff;
-      border-radius: 5px;
-      width: 100%;
-      height: 6px;
-    }
-    .line-menu.half {
-      width: 50%;
-    }
-    .line-menu.start {
-      transition: transform 330ms cubic-bezier(0.54, -0.81, 0.57, 0.57);
-      transform-origin: right;
-    }
-    .main{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        width: 95%;
-        margin: auto;
-        height: 90vh;
-        background-color: #000;
-        background-image: url(images/portrait.jpeg);
-        background-position: left;
-        background-size: cover;
-        background-repeat: no-repeat;
-        text-align: center;
-        overflow: auto;
-        overflow: hidden;
-    }
-    h2{
-        margin: 0;
-        text-align: left;
-        position: relative;
-        transition: .4s;
-        z-index: -1;
-        -webkit-animation-duration: 1s, 2s;
-        -webkit-animation-name: topToBottom;
-        font-size: 2.5em;
-        padding: 10px;
-        color: #fff;
-        text-transform: uppercase;
-        font-family: 'Staatliches', cursive;
-        letter-spacing: .2em;
-        font-weight: 500;
-    }
-    .center{
-        display: none;
-        overflow: hidden;
-        position: absolute;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,-50%);
-    }
-    .bottom-right-align{
-        position: absolute;
-        right:30px;
-        bottom: 30px;
-        opacity: .8;
-    }
-    .left-center-align{
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        left: 50px;
-    }
-    p.slogan{
-        font-family: 'Belleza', sans-serif;
-        color: #d9d9d9;
-        font-size: 1.5em;
-        position: relative;
-        left: 30px;
-    }
-    .overlay{
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background: rgba(0,0,0,.2);
-    }
-    @media screen and (max-width: 800px) {
-        .main{
-            background-image: url(images/portrait.jpeg);
-            background-position: center;
-            background-size: cover;
-            background-repeat: no-repeat;
-        }
-        h2{
-            text-align: center;
-        }
-        .left-center-align{
-            width: 100%;
-            margin: auto;
-            left: 0;
-        }
-        p.slogan{
-            width: 100%;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-        }
-}
-</style>
-</head>
-<body>
-    
-    <div class="main">     
-        <div class="overlay"></div>
-        <div class="wrapper-menu">
-          <div class="line-menu half start"></div>
-          <div class="line-menu"></div>
-          <div class="line-menu half end"></div>
-        </div>
-        <span class="pulse"></span>
-        
-        <nav>
-            <div class="center-nav">
-                <ul>
-                    <div class="animsition-overlay" data-animsition-overlay="true">
-                    <a href="index.html" class="animsition-link"><li class="active">Home</li></a>
-                    <a href="about.html" class="animsition-link"><li>About</li></a>
-                    <a href="services.html"><li>Services</li></a>
-                    <a href="work.html"><li>Work</li></a>
-                    <a href="contact.html"><li>Contact</li></a>
-                    </div>    
-                </ul> 
-            </div> 
-            <p>Anup&#39;s Design | <span class="year"></span> </p>
-        </nav>
-        <div class="bottom-right-align">
-            <img style="pointer-events: none;" class="logo" width="150px" src="images/logo.png">
-        </div>
-        <div class="left-center-align">
-            <h2>anup&#39;s design</h2>
-            <p class="slogan">I will build website that will build your business</p>
-        </div>
-        <div class="center">
-        <img style="pointer-events: none;" class="logo" width="210px" src="images/logo.png">
-        <h2>anup&#39;s design</h2>
-        <a href="contact.html"><button>Hire Me</button></a>   
-        </div>
-        
-    </div>
-    
-    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-    <script type="text/javascript">
-      $('.wrapper-menu').click(function(){
-        $('nav').toggleClass("show-menu");
-        $('nav ul a li').toggleClass("show-menu");  
-      });
-    $('nav a').click(function(){
-        $('nav').toggleClass("show-menu");
-        $('nav ul a li').toggleClass("show-menu");  
-      });    
-    </script>
-    <script>
-        var wrapperMenu = document.querySelector('.wrapper-menu');
-        var showMenu = document.querySelector('nav');
-        var showLi = document.querySelector('li');
-        var navLink = document.querySelector('nav ul');
-        wrapperMenu.addEventListener('click', function(){
-            wrapperMenu.classList.toggle('open');
-            showMenu.toggleClass('show-menu'); 
-            showLi.toggleClass('show-li'); 
-        })
-        navLink.addEventListener('click', function(){
-           wrapperMenu.classList.toggle('open');
-            showMenu.toggleClass('show-menu'); 
-            showLi.toggleClass('show-li');  
-        })
-    </script>
-    <script>
-function openSection(evt, section) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-    tablinks[i].className = tablinks[i].className.replace(" pointer", "");  
-  }
-  document.getElementById(section).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-</script>    
-    <script>
-        var d = new Date();
-        document.querySelector(".year").innerHTML = d.getFullYear();
-    </script>
-</body>
-</html> 
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+      <link rel="stylesheet" href="style/main.css">
+      <script src="https://kit.fontawesome.com/0bbf47f20a.js" crossorigin="anonymous"></script>
+    <title>AnupsDesign</title>
+  </head>
+  <body>
+      <div class="body-wrap">
+          <div class="main">
+              <div class="coming-soon-overlay">
+                  <a href="index.html"><div class="logo2">ad</div></a>
+                  <div class="center-text">
+                      <h1>New website coming soon</h1>
+                      <h6>I&#39;m currently working on a new design <br>I apologize for your incovenience</h6>
+                  </div>
+              </div>
+              <div class="container-fluid">
+                  <div class="row">
+                      <div class="col-6">
+                          <a href="index.html"><div class="logo">ad</div></a>
+                      </div>
+                      <div class="col-6">
+                          <nav>
+                              <button>About</button>
+                              <button>Work</button>
+                              <button>Contact</button>
+                          </nav>
+                      </div>
+                  </div>
+              </div>
+              <div class="portrait">
+                  <div class="portrait-text">
+<!--                      <h1>I create websites <br>that help businesses standout</h1><button>Here's how</button>-->
+                      <h1>Hi there, I'm Anup 👋</h1>
+                      <h5>Full-Stack Developer &amp; Student</h5>
+                  </div>
+              </div>
+              <div class="page-indicator">
+                  <h1>Intro</h1>
+              </div>
+              <span class="github-icon"><a href="#" target="_blank"><i class="fab fa-github"></i></a></span>
+              <div class="next-page">
+                  <label for="next-btn">View Profile</label>
+                  <button id="next-btn">
+                      <i class="fas fa-angle-right slide-out-arrow"></i>
+                  </button>
+              </div>
+          </div>
+      </div>
+      
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+      <script>
+          $(function() {
+              $('nav button').addClass('fade-in-right');
+              $('.logo').addClass('fade-in-left');
+              $('.page-indicator').addClass('text-focus-in');
+              $('.portrait').addClass('text-focus-in');
+              $('.portrait-text h1').addClass('fade-in-bottom');
+              $('.portrait-text h5').addClass('fade-in-bottom');
+              $('.next-page').addClass('fade-in-left');
+              $('.github-icon').addClass('fade-in');
+              $('.coming-soon-overlay .logo2').addClass('fade-in-top');
+              $('.coming-soon-overlay h1').addClass('fade-in-bottom');
+              $('.coming-soon-overlay h6').addClass('fade-in-bottom');
+          });
+          $('.next-page').on('mouseover', function(){
+              $('.next-page label').css('transform','translateX(-10px)');
+              $('.next-page label').css('color','burlywood');
+          });
+          $('.next-page').on('mouseleave', function(){
+              $('.next-page label').css('transform','translateX(0px)');
+              $('.next-page label').css('color','#fff');
+          });
+      </script>
+  </body>
+</html>
